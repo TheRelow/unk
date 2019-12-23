@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Cofo Sans';
+    src: url('../font/CoFo_Sans-Regular.ttf') format('truetype'); /* IE9 Compat Modes */
+    font-weight: 400;
+  }
+@font-face {
+    font-family: 'Cofo Sans';
+    src: url('../font/CoFo_Sans-Bold.ttf') format('truetype'); /* IE9 Compat Modes */
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'FreeSetC';
+    src: url('../font/FreeSetC-Bold.otf') format('truetype'); /* IE9 Compat Modes */
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'FreeSetC';
+    src: url('../font/FreeSetC.otf') format('truetype'); /* IE9 Compat Modes */
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'FreeSetC';
+    src: url('../font/FreeSetC.otf') format('truetype'); /* IE9 Compat Modes */
+    font-weight: 400;
+}

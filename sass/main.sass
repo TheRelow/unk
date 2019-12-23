@@ -1,0 +1,154 @@
+$red: #e3241c
+
+@mixin placeholder 
+  &::-webkit-input-placeholder
+  	@content
+  &:-moz-placeholder
+  	@content
+  &::-moz-placeholder
+  	@content
+  &:-ms-input-placeholder
+  	@content
+
+
+%flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: Roboto, sans-serif
+	outline: none
+	text-decoration: none
+
+body
+	overflow: hidden
+	font-family: 'FreeSetC', sans-serif
+
+section.animation
+	height: 100vh
+	width: 100vw
+
+.right-top
+	position: absolute
+	top: 82px
+	right: 125px
+	font-size: 20px
+	color: #b0b0b0
+	transition: all 0.334s ease 0.7s
+	transform: translateY(-15px)
+	opacity: 0
+
+.left-bottom
+	position: absolute
+	bottom: 76px
+	left: 117px
+	font-size: 18px
+	color: #b0b0b0
+	transition: all 0.334s ease 0.7s
+	transform: translateY(-15px)
+	opacity: 0
+
+.right-top.content-loaded
+	transform: translateY(0px)
+	opacity: 1
+
+.left-bottom.content-loaded
+	transform: translateY(0px)
+	opacity: 1
+
+.animation
+	&__center
+		@extend %flex
+		flex-direction: column
+		justify-content: space-between
+		width: 42%
+		min-width: 750px
+		margin: 25vh auto 0
+	&__text
+		font-size: 1.7vw
+		line-height: 2vw
+		padding: 0 1vw
+		b
+			color: $red
+		margin-bottom: 2vw
+	&__icons
+		@extend %flex
+		justify-content: space-between
+		align-content: flex-end
+		.item
+			opacity: 0
+			width: 20%
+			height: 100%
+			align-self: flex-end
+			&__text
+				text-align: center
+				color: #b0b0b0
+				transition: .1s ease
+			&:hover .item__text
+				color: #333
+			&__img
+				filter: grayscale(1)
+				opacity: 0.42
+				transition: .1s ease
+			&:hover .item__img
+				filter: grayscale(0)
+				opacity: 1
+		.item1
+			transform: translateX(-30px)
+			transition: all 1.202s cubic-bezier(.2,.54,.53,.92) 0s
+		.item2
+			transform: translateX(-20px) scale(0.9)
+			transition: all 1.066s cubic-bezier(.28,.62,.61,.93) .136s
+		.item3
+			transform: translateX(20px) scale(0.9)
+			transition: all 1.002s cubic-bezier(.1,.58,.55,.89) .2s
+		.item4
+			transform: translateX(30px)
+			transition: all .902s cubic-bezier(.2,.54,.53,.92) .3s
+		.item1.content-loaded
+			transform: translateX(0px)
+			opacity: 1
+		.item2.content-loaded
+			transform: translateX(0px)
+			opacity: 1
+		.item3.content-loaded
+			transform: translateX(0px)
+			opacity: 1
+		.item4.content-loaded
+			transform: translateX(0px)
+			opacity: 1
+
+	&__line
+		opacity: 0
+		display: block
+		margin-top: -30px
+	&__line1
+		transform: translateY(-17px)
+		transition: all 1.202s ease-in-out 0s
+	&__line2
+		transform: translateY(-16px)
+		transition: all .968s ease-in-out .234s
+	&__line3
+		transform: translateY(-15px)
+		transition: all .700s ease-in-out .502s
+	&__line1.content-loaded
+		transform: translateY(0px)
+		opacity: 1
+	&__line2.content-loaded
+		transform: translateY(0px)
+		opacity: 1
+	&__line3.content-loaded
+		transform: translateY(0px)
+		opacity: 1
+
+@media (max-width: 1810px)
+	.animation
+		&__text
+			font-size: 31px
+			line-height: 34px
